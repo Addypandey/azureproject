@@ -1,0 +1,15 @@
+{
+	"name": "adarsh-df",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "18f1e493-3759-47e3-a17c-09b717000e85",
+		"tenantId": "61a38eaa-dfe4-4b6c-b1b2-85df79dd5c26"
+	}
+}
