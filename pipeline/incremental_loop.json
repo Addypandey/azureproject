@@ -43,7 +43,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select * From @{item().schema}.@{item().table} where @{item().cdc_column} > '@{if(empty(item().from_date),activity('last_cdc').output.value[0].cdc,item().from_date)}'\n",
+										"value": "select * From @{item().schema}.@{item().table} where @{item().cdc_col} > '@{if(empty(item().from_date),activity('last_cdc').output.value[0].cdc,item().from_date)}'\n",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -302,7 +302,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "select max(@{item().cdc_column}) as cdc from @{item().schema}. @{item().table}",
+														"value": "select max(@{item().cdc_col}) as cdc from @{item().schema}. @{item().table}",
 														"type": "Expression"
 													}
 												}
