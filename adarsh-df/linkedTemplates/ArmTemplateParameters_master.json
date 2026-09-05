@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adarsh-df"
+		},
+		"ADLS_LS_accountKey": {
+			"value": ""
+		},
+		"azure_sql_password": {
+			"value": ""
+		},
+		"datalake_accountKey": {
+			"value": ""
+		},
+		"ADLS_LS_properties_typeProperties_url": {
+			"value": "https://adarshrsg.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://project1azure.vault.azure.net/"
+		},
+		"S3_LS_properties_typeProperties_accessKeyId": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "s3accesskeyid"
+			}
+		},
+		"azure_sql_properties_typeProperties_server": {
+			"value": "azureprojectadarsh.database.windows.net"
+		},
+		"azure_sql_properties_typeProperties_database": {
+			"value": "azureprojectDB"
+		},
+		"azure_sql_properties_typeProperties_userName": {
+			"value": "admin1234"
+		},
+		"datalake_properties_typeProperties_url": {
+			"value": "https://adarshrsg.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
